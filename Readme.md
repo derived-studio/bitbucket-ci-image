@@ -1,6 +1,9 @@
 # Docker image for Bitbucket CI Pipelines
 > Created for and used by [Forsaken Expanse](https://forsakenexpanse.com/) Sci-Fi strategy game.
 
+## Docker Hub
+[hub.docker.com/r/fullstackforger/bitbucket-ci-image](https://hub.docker.com/r/fullstackforger/bitbucket-ci-image)
+
 ## About `bitbucket-ci-image:light`
 Image Dockerfile is based on `atlassian/default-image:2` - [Atlassian CI image v2](https://hub.docker.com/r/atlassian/default-image).
 
