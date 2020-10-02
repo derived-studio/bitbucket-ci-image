@@ -26,10 +26,17 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.
     && . $NVM_DIR/nvm.sh \
     && nvm install $NODE_VERSION \
     && nvm alias default $NODE_VERSION \
-    && nvm use default
+    && nvm use default \
+    # Install npm patches and latest yarn
+    && npm install -g npm yarn \
+    # smoke tests
+    && node --version \
+    && npm --version
+
 
 # Set node path
 ENV NODE_PATH=$NVM_DIR/v$NODE_VERSION/lib/node_modules
+
 
 # Default to UTF-8 file.encoding
 ENV LANG=C.UTF-8 \
